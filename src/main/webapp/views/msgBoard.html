@@ -1,0 +1,25 @@
+<div class="jumbotron text-center">
+	<h1>Domain Dash</h1>
+    <br>
+    <br>
+    <br>
+
+    <table class="table">
+        <tbody>
+        <tr style="height:200px">
+            <td ng-repeat="domain in domainList">
+                <div class="flip">
+                    <div class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped" ng-mouseleave="isFlipped=false">
+                        <div class="face front">
+                            {{domain}}
+                        </div>
+                        <div class="face back" ng-click="domainBoard(domain)" style="font-size: 24px">
+                            Start Monitoring
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

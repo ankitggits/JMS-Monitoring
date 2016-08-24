@@ -1,0 +1,72 @@
+.onoffswitch {
+    position: relative; width: 200px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 50px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 75px; padding: 0; line-height: 75px;
+    font-size: 17px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "START-TEST";
+    padding-left: 20px;
+    background-color: #449D44; color: #FFFFFF;
+    text-align: left;
+}
+.onoffswitch-inner:after {
+    content: "ABORT-TEST";
+    padding-right: 20px;
+    background-color: #F05A43; color: #1F0F0F;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 15px; margin: 30px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 121px;
+    border: 2px solid #999999; border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.progress-wrapper{
+    position: relative;
+    margin:20px auto;
+    font-size: 40px;
+}
+
+.progress{
+    position: absolute;
+    color: #bbb;
+    font-weight: 100;
+    line-height: 1;
+
+}
+
+.progress-container{
+    width: 100%;
+    max-width: 300px;
+    margin:50px auto 100px;
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+

@@ -1,0 +1,26 @@
+
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+
+    <div ng-show="hasError" class="alert alert-danger">{{errorMessage}}</div>
+    
+    <form method="post">
+        <div class="form-group" >
+            <label>Username</label>
+            <input style="height: 40px" type="text" class="form-control" name="email" type="email" ng-model="loginDetail.username" ng-click="clearMsg()">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input style="height: 40px" type="password" class="form-control" name="password" ng-model="loginDetail.password" ng-click="clearMsg()">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg" ng-click="loginUser()">Login</button>
+    </form>
+
+    <hr>
+
+    <p>Contact our admin if you need an account</p>
+
+</div>

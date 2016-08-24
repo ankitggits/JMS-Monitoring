@@ -1,0 +1,44 @@
+<div class="jumbotron text-center">
+	<h1>Track Your Message</h1>
+    <div class="flexsearch">
+      <div class="flexsearch--wrapper" >
+        <form class="flexsearch--form" ng-submit="fetchRecords(myModel);" >
+          <div class="flexsearch--input-wrapper">
+            <input class="flexsearch--input" style=" padding-left: 20px; padding-right: 35px;" type="text" placeholder="Search By Correlation or Operation" ng-model="myModel" auto-complete>
+          </div>
+          <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div ng-show="showTable">
+        <table class="table" style="width: 95%;">
+            <thead style="display: block">
+            <tr>
+                <th style="width: 22%;">CorrelationId</th>
+                <th style="width: 22%;">SourceAppId</th>
+                <th style="width: 22%;">OpCode</th>
+                <th style="width: 22%;">ReplyTo</th>
+                <th style="width: 22%;">Timestamp</th>
+            </tr>
+            </thead>
+            <tbody style="display: block">
+            <tr ng-repeat="entity in entityList" >
+                <td style="width: 22%;"><a ng-click="toggleModal(entity)">{{entity.jmscorrelationID}}</a></td>
+                <td style="width: 22%;">{{entity.sourceAppId}}</td>
+                <td style="width: 22%;">{{entity.opCode}}</td>
+                <td style="width: 22%;">{{entity.replyTo}}</td>
+                <td style="width: 22%;">{{entity.timeStamp}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <modal title="Message Content" visible="showModal">
+        <!--<pre>{{component | json}}</pre>-->
+        <json-formatter json= component open="1"></json-formatter>
+    </modal>
+
+</div>

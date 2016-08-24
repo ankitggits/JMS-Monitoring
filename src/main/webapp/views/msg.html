@@ -1,0 +1,29 @@
+<div class="jumbotron text-center">
+	<h1>{{selectedDomain}} CONSOLE</h1>
+    <input class="flexsearch--input" style="padding-left: 20px; margin-bottom:20px;width: 300px; height: 40px ;float: right;font-size: 18px" type="text" placeholder="Search Table " ng-model="searchKeyword">
+
+    <table class="table" style="width: 95%;">
+      <thead style="display: block">
+        <tr>
+          <th style="width: 22%;">CorrelationId</th>
+          <th style="width: 22%;">SourceAppId</th>
+          <th style="width: 22%;">OpCode</th>
+          <th style="width: 22%;">ReplyTo</th>
+          <th style="width: 22%;">Timestamp</th>
+        </tr>
+      </thead>
+      <tbody style="display: block">
+        <tr ng-repeat="message in messageList | filter: searchKeyword" >
+          <td style="width: 22%;"><a ng-click="toggleModal(message)">{{message.jmscorrelationID}}</a></td>
+          <td style="width: 22%;">{{message.sourceAppId}}</td>
+          <td style="width: 22%;">{{message.opCode}}</td>
+          <td style="width: 22%;">{{message.replyTo}}</td>
+          <td style="width: 22%;">{{message.timeStamp}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <modal title="Message Content" visible="showModal">
+    <json-formatter json= component open="1"></json-formatter>
+  </modal>
+</div>

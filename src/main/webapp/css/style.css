@@ -1,0 +1,65 @@
+#sortable {
+ 		list-style-type: none; 
+ 		margin: 0; 
+ 		padding: 0; 
+ 		width: 1000px; 
+ 	}
+
+#sortable li {
+		margin: 10px 10px 10px 20px;
+		padding: 1px;
+		float: left;
+		width: 150px;
+		height: 90px;
+		font-size: 2em;
+		text-align: center;
+	}
+
+body { padding-top:30px; }
+.error{
+    color: red;
+    border-color:red;
+}
+
+.table tbody td, thead th {
+	text-align: center;
+}
+
+.table tbody {
+	height: 400px;       /* Just for the demo          */
+	overflow-y: auto;    /* Trigger vertical scroll    */
+	overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+.msgBoardClass {
+	display: inline-block;
+	border-radius: 130px;
+	background-color: #369;
+	color: white;
+	border: 5px solid white;
+	margin-left: 50px;
+	margin-right: 50px;
+	width:200px;
+	height:200px;
+	cursor: pointer
+}
+
+pre {
+	outline: 1px solid #ccc; padding: 5px; margin: 5px;
+}
+.string {
+	color: green;
+}
+.number {
+	color: darkorange;
+}
+.boolean {
+	color: blue;
+}
+.null {
+	color: magenta;
+}
+.key {
+	color: red;
+}
+
